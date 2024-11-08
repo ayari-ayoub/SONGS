@@ -3,8 +3,11 @@
 
 
 int main(){
-
+load_id_counters();
 int x=1;
+    
+    
+    
     while(x==1){
 
     
@@ -22,16 +25,24 @@ int x=1;
             switch (c)
             {
             case 1:
-                add_song();
+                struct song my_song;
+                 add_song(&my_song);
+                save_to_file(&my_song,sizeof(struct song), "songs.bin");
                 
                 break;
             case 2:
-                add_artist();
+                struct singer my_singer;
+                add_singer(&my_singer);
+                save_to_file(&my_singer,sizeof(struct singer), "singer.bin");
+                free_singer(&my_singer);
                 
                 break;
 
             case 3:
-                add_album();
+                struct album my_album;
+                 add_album(&my_album);
+                 save_to_file(&my_album,sizeof(struct album), "album.bin");
+                 
                 
                 break;    
             default:
