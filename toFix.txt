@@ -1,0 +1,9 @@
+to fix :
+
+2- in adding the album we need to add a function that search 
+the new albums name through the saved songs
+and collect the songs id's if they exsist in the albums songs id 
+3-fix the searchh album function cant find albums
+4-print more info about the singer in search singer
+5-need to change all inputs from scanf to gets or smthing that accept espace
+6-there is a memory probleme in tha last search function 

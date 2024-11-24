@@ -1,0 +1,10 @@
+void stop_song() {
+    if (current_music != NULL) {
+        Mix_HaltMusic();       // Stop the music
+        Mix_FreeMusic(current_music);  // Free the music object
+        current_music = NULL;   // Reset the global pointer
+        printf("Music stopped.\n");
+    } else {
+        printf("No music is playing.\n");
+    }
+}
